@@ -2,7 +2,7 @@ package br.com.senac.montadora_api.dtos;
 
 public class ModeloRequestDto {
     private String nome;
-    private Long montadora_id;
+    private Long montadoraId;
 
     public String getNome() {
         return nome;
@@ -12,11 +12,11 @@ public class ModeloRequestDto {
         this.nome = nome;
     }
 
-    public Long getMontadora_id() {
-        return montadora_id;
+    public Long getMontadoraId() {
+        return montadoraId;
     }
 
-    public void setMontadora_id(Long montadora_id) {
-        this.montadora_id = montadora_id;
+    public void setMontadoraid(Long montadora_id) {
+        this.montadoraId = montadora_id;
     }
 }

@@ -1,7 +1,11 @@
 package br.com.senac.montadora_api.entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Montadora {
@@ -12,6 +16,18 @@ public class Montadora {
 
     @Column(nullable = false)
     private String nome;
+
+    @OneToMany(mappedBy = "montadora")
+    @JsonManagedReference
+    private List<Modelo> modelos = new ArrayList<>();
+
+    public List<Modelo> getModelos() {
+        return modelos;
+    }
+
+    public void setModelos(List<Modelo> modelos) {
+        this.modelos = modelos;
+    }
 
     public String getNome() {
         return nome;

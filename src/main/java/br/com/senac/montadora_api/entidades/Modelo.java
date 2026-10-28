@@ -45,4 +45,16 @@ public class Modelo {
     public void setMontadora(Montadora montadora) {
         this.montadora = montadora;
     }
+
+    @OneToMany(mappedBy = "modelo")
+    @JsonManagedReference
+    private List<Versao> versoes = new ArrayList<>();
+
+    public List<Versao> getVersoes() {
+        return versoes;
+    }
+
+    public void setVersoes(List<Versao> versoes) {
+        this.versoes = versoes;
+    }
 }

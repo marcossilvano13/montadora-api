@@ -2,7 +2,7 @@ package br.com.senac.montadora_api.dtos;
 
 public class VersaoRequestDto {
     private String motor;
-    private Long modelo_Id;
+    private Long modeloId;
 
     public String getMotor() {
         return motor;
@@ -12,11 +12,11 @@ public class VersaoRequestDto {
         this.motor = motor;
     }
 
-    public Long getModelo_Id() {
-        return modelo_Id;
+    public Long getModeloId() {
+        return modeloId;
     }
 
-    public void setModelo_Id(Long modelo_Id) {
-        this.modelo_Id = modelo_Id;
+    public void setModeloId(Long modelo_Id) {
+        this.modeloId = modelo_Id;
     }
 }
