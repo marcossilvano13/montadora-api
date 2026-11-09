@@ -1,6 +1,6 @@
 package br.com.senac.montadora_api.service;
 
-import br.com.senac.montadora_api.entidades.Usuarios;
+import  br.com.senac.montadora_api.entidades.Usuarios;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
@@ -31,7 +31,7 @@ public class JwtService {
             return JWT.require(algorithm).withIssuer("montadora-api").
                     build().verify(token).getSubject();
         }catch (JWTVerificationException e){
-            throw null;
+            return null;
         }
     }
 
